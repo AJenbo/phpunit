@@ -507,6 +507,11 @@
       <code>$setting[1]</code>
     </PossiblyUndefinedArrayOffset>
   </file>
+  <file src="src/Runner/TestFinder/TestCollection.php">
+    <PropertyTypeCoercion>
+      <code>$tests</code>
+    </PropertyTypeCoercion>
+  </file>
   <file src="src/Runner/TestResult/Collector.php">
     <RedundantCondition>
       <code>assert($testSuite instanceof TestSuiteForTestMethodWithDataProvider)</code>
