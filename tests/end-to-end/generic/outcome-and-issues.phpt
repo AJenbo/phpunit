@@ -104,88 +104,58 @@ skipped message
 
 There were 5 deprecations:
 
-1) PHPUnit\TestFixture\OutcomesAndIssuesTest::testSuccessWithDeprecation
-deprecation message
+1) deprecation message
+Triggered at these locations:
+ - %sOutcomesAndIssuesTest.php:%d
+ - %sOutcomesAndIssuesTest.php:%d
+ - %sOutcomesAndIssuesTest.php:%d
+ - %sOutcomesAndIssuesTest.php:%d
+ - %sOutcomesAndIssuesTest.php:%d
 
-%sOutcomesAndIssuesTest.php:%d
-
-2) PHPUnit\TestFixture\OutcomesAndIssuesTest::testFailWithDeprecation
-deprecation message
-
-%sOutcomesAndIssuesTest.php:%d
-
-3) PHPUnit\TestFixture\OutcomesAndIssuesTest::testErrorWithDeprecation
-deprecation message
-
-%sOutcomesAndIssuesTest.php:%d
-
-4) PHPUnit\TestFixture\OutcomesAndIssuesTest::testIncompleteWithDeprecation
-deprecation message
-
-%sOutcomesAndIssuesTest.php:%d
-
-5) PHPUnit\TestFixture\OutcomesAndIssuesTest::testSkippedWithDeprecation
-deprecation message
-
-%sOutcomesAndIssuesTest.php:%d
+Triggered by these tests:
+ - PHPUnit\TestFixture\OutcomesAndIssuesTest::testErrorWithDeprecation (%sOutcomesAndIssuesTest.php:%d)
+ - PHPUnit\TestFixture\OutcomesAndIssuesTest::testFailWithDeprecation (%sOutcomesAndIssuesTest.php:%d)
+ - PHPUnit\TestFixture\OutcomesAndIssuesTest::testIncompleteWithDeprecation (%sOutcomesAndIssuesTest.php:%d)
+ - PHPUnit\TestFixture\OutcomesAndIssuesTest::testSkippedWithDeprecation (%sOutcomesAndIssuesTest.php:%d)
+ - PHPUnit\TestFixture\OutcomesAndIssuesTest::testSuccessWithDeprecation (%sOutcomesAndIssuesTest.php:%d)
 
 --
 
 There were 5 notices:
 
-1) PHPUnit\TestFixture\OutcomesAndIssuesTest::testSuccessWithNotice
-notice message
+1) notice message
+Triggered at these locations:
+ - %sOutcomesAndIssuesTest.php:%d
+ - %sOutcomesAndIssuesTest.php:%d
+ - %sOutcomesAndIssuesTest.php:%d
+ - %sOutcomesAndIssuesTest.php:%d
+ - %sOutcomesAndIssuesTest.php:%d
 
-%sOutcomesAndIssuesTest.php:%d
-
-2) PHPUnit\TestFixture\OutcomesAndIssuesTest::testFailWithNotice
-notice message
-
-%sOutcomesAndIssuesTest.php:%d
-
-3) PHPUnit\TestFixture\OutcomesAndIssuesTest::testErrorWithNotice
-notice message
-
-%sOutcomesAndIssuesTest.php:%d
-
-4) PHPUnit\TestFixture\OutcomesAndIssuesTest::testIncompleteWithNotice
-notice message
-
-%sOutcomesAndIssuesTest.php:%d
-
-5) PHPUnit\TestFixture\OutcomesAndIssuesTest::testSkippedWithNotice
-notice message
-
-%sOutcomesAndIssuesTest.php:%d
+Triggered by these tests:
+ - PHPUnit\TestFixture\OutcomesAndIssuesTest::testErrorWithNotice (%sOutcomesAndIssuesTest.php:%d)
+ - PHPUnit\TestFixture\OutcomesAndIssuesTest::testFailWithNotice (%sOutcomesAndIssuesTest.php:%d)
+ - PHPUnit\TestFixture\OutcomesAndIssuesTest::testIncompleteWithNotice (%sOutcomesAndIssuesTest.php:%d)
+ - PHPUnit\TestFixture\OutcomesAndIssuesTest::testSkippedWithNotice (%sOutcomesAndIssuesTest.php:%d)
+ - PHPUnit\TestFixture\OutcomesAndIssuesTest::testSuccessWithNotice (%sOutcomesAndIssuesTest.php:%d)
 
 --
 
 There were 5 warnings:
 
-1) PHPUnit\TestFixture\OutcomesAndIssuesTest::testSuccessWithWarning
-warning message
+1) warning message
+Triggered at these locations:
+ - %sOutcomesAndIssuesTest.php:%d
+ - %sOutcomesAndIssuesTest.php:%d
+ - %sOutcomesAndIssuesTest.php:%d
+ - %sOutcomesAndIssuesTest.php:%d
+ - %sOutcomesAndIssuesTest.php:%d
 
-%sOutcomesAndIssuesTest.php:%d
-
-2) PHPUnit\TestFixture\OutcomesAndIssuesTest::testFailWithWarning
-warning message
-
-%sOutcomesAndIssuesTest.php:%d
-
-3) PHPUnit\TestFixture\OutcomesAndIssuesTest::testErrorWithWarning
-warning message
-
-%sOutcomesAndIssuesTest.php:%d
-
-4) PHPUnit\TestFixture\OutcomesAndIssuesTest::testIncompleteWithWarning
-warning message
-
-%sOutcomesAndIssuesTest.php:%d
-
-5) PHPUnit\TestFixture\OutcomesAndIssuesTest::testSkippedWithWarning
-warning message
-
-%sOutcomesAndIssuesTest.php:%d
+Triggered by these tests:
+ - PHPUnit\TestFixture\OutcomesAndIssuesTest::testErrorWithWarning (%sOutcomesAndIssuesTest.php:%d)
+ - PHPUnit\TestFixture\OutcomesAndIssuesTest::testFailWithWarning (%sOutcomesAndIssuesTest.php:%d)
+ - PHPUnit\TestFixture\OutcomesAndIssuesTest::testIncompleteWithWarning (%sOutcomesAndIssuesTest.php:%d)
+ - PHPUnit\TestFixture\OutcomesAndIssuesTest::testSkippedWithWarning (%sOutcomesAndIssuesTest.php:%d)
+ - PHPUnit\TestFixture\OutcomesAndIssuesTest::testSuccessWithWarning (%sOutcomesAndIssuesTest.php:%d)
 
 ERRORS!
 Tests: 17, Assertions: 7, Errors: 3, Failures: 3, Warnings: 5, Deprecations: 5, Notices: 5, Skipped: 3, Incomplete: 3, Risky: 1.

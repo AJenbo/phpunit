@@ -1,9 +1,11 @@
 There was 1 PHP warning:
 
-1) FooTest::testBar
-message
+1) message
+Triggered at these locations:
+ - file.php:1
 
-%s:%i
+Triggered by these tests:
+ - FooTest::testBar (FooTest.php:1)
 
 OK, but some tests have issues!
 Tests: 1, Assertions: 1, Warnings: 1.

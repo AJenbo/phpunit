@@ -9,7 +9,6 @@
  */
 namespace PHPUnit\TextUI\Output\Default;
 
-use const PHP_EOL;
 use function array_merge;
 use function array_reverse;
 use function assert;
@@ -25,18 +24,12 @@ use PHPUnit\Event\Code\Test;
 use PHPUnit\Event\Code\TestMethod;
 use PHPUnit\Event\Test\BeforeFirstTestMethodErrored;
 use PHPUnit\Event\Test\ConsideredRisky;
-use PHPUnit\Event\Test\DeprecationTriggered;
-use PHPUnit\Event\Test\ErrorTriggered;
-use PHPUnit\Event\Test\NoticeTriggered;
-use PHPUnit\Event\Test\PhpDeprecationTriggered;
-use PHPUnit\Event\Test\PhpNoticeTriggered;
 use PHPUnit\Event\Test\PhpunitDeprecationTriggered;
 use PHPUnit\Event\Test\PhpunitErrorTriggered;
 use PHPUnit\Event\Test\PhpunitWarningTriggered;
-use PHPUnit\Event\Test\PhpWarningTriggered;
-use PHPUnit\Event\Test\WarningTriggered;
 use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
 use PHPUnit\TestRunner\TestResult\TestResult;
+use PHPUnit\TextUI\Output\Default\Issues\FilteringIssueMapper;
 use PHPUnit\TextUI\Output\Printer;
 
 /**
@@ -286,7 +279,7 @@ final class ResultPrinter
 
         $this->printList(
             $result->numberOfTestsWithTestTriggeredPhpDeprecationEvents(),
-            $this->mapTestsWithIssuesEventsToElements($result->testTriggeredPhpDeprecationEvents()),
+            (new FilteringIssueMapper)->map($result->testTriggeredPhpDeprecationEvents()),
             'PHP deprecation'
         );
     }
@@ -299,7 +292,7 @@ final class ResultPrinter
 
         $this->printList(
             $result->numberOfTestsWithTestTriggeredDeprecationEvents(),
-            $this->mapTestsWithIssuesEventsToElements($result->testTriggeredDeprecationEvents()),
+            (new FilteringIssueMapper)->map($result->testTriggeredDeprecationEvents()),
             'deprecation'
         );
     }
@@ -312,7 +305,7 @@ final class ResultPrinter
 
         $this->printList(
             $result->numberOfTestsWithTestTriggeredErrorEvents(),
-            $this->mapTestsWithIssuesEventsToElements($result->testTriggeredErrorEvents()),
+            (new FilteringIssueMapper)->map($result->testTriggeredErrorEvents()),
             'error'
         );
     }
@@ -325,7 +318,7 @@ final class ResultPrinter
 
         $this->printList(
             $result->numberOfTestsWithTestTriggeredPhpNoticeEvents(),
-            $this->mapTestsWithIssuesEventsToElements($result->testTriggeredPhpNoticeEvents()),
+            (new FilteringIssueMapper)->map($result->testTriggeredPhpNoticeEvents()),
             'PHP notice'
         );
     }
@@ -338,7 +331,7 @@ final class ResultPrinter
 
         $this->printList(
             $result->numberOfTestsWithTestTriggeredNoticeEvents(),
-            $this->mapTestsWithIssuesEventsToElements($result->testTriggeredNoticeEvents()),
+            (new FilteringIssueMapper)->map($result->testTriggeredNoticeEvents()),
             'notice'
         );
     }
@@ -351,7 +344,7 @@ final class ResultPrinter
 
         $this->printList(
             $result->numberOfTestsWithTestTriggeredPhpWarningEvents(),
-            $this->mapTestsWithIssuesEventsToElements($result->testTriggeredPhpWarningEvents()),
+            (new FilteringIssueMapper)->map($result->testTriggeredPhpWarningEvents()),
             'PHP warning'
         );
     }
@@ -364,7 +357,7 @@ final class ResultPrinter
 
         $this->printList(
             $result->numberOfTestsWithTestTriggeredWarningEvents(),
-            $this->mapTestsWithIssuesEventsToElements($result->testTriggeredWarningEvents()),
+            (new FilteringIssueMapper)->map($result->testTriggeredWarningEvents()),
             'warning'
         );
     }
@@ -450,7 +443,7 @@ final class ResultPrinter
     }
 
     /**
-     * @psalm-param array<string,list<ConsideredRisky|DeprecationTriggered|PhpDeprecationTriggered|PhpunitDeprecationTriggered|ErrorTriggered|NoticeTriggered|PhpNoticeTriggered|WarningTriggered|PhpWarningTriggered|PhpunitErrorTriggered|PhpunitWarningTriggered>> $events
+     * @psalm-param array<string,list<ConsideredRisky|PhpunitDeprecationTriggered|PhpunitErrorTriggered|PhpunitWarningTriggered>> $events
      *
      * @psalm-return list<array{title: string, body: string}>
      */

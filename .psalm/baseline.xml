@@ -786,6 +786,14 @@
       <code>$option['desc']</code>
     </PossiblyUndefinedArrayOffset>
   </file>
+  <file src="src/TextUI/Output/Default/Issues/FilteringIssueMapper.php">
+    <ArgumentTypeCoercion>
+      <code>$event-&gt;file()</code>
+    </ArgumentTypeCoercion>
+    <RedundantCondition>
+      <code>assert($test instanceof TestMethod)</code>
+    </RedundantCondition>
+  </file>
   <file src="src/TextUI/Output/Default/ResultPrinter.php">
     <RedundantCondition>
       <code>assert($test instanceof TestMethod)</code>
