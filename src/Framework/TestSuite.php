@@ -70,13 +70,15 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
     private array $tests             = [];
     private ?array $providedTests    = null;
     private ?Factory $iteratorFilter = null;
+    private readonly bool $stopOnDefect;
+    private readonly bool $stopOnDeprecation;
     private readonly bool $stopOnError;
     private readonly bool $stopOnFailure;
-    private readonly bool $stopOnWarning;
-    private readonly bool $stopOnRisky;
     private readonly bool $stopOnIncomplete;
+    private readonly bool $stopOnNotice;
+    private readonly bool $stopOnRisky;
     private readonly bool $stopOnSkipped;
-    private readonly bool $stopOnDefect;
+    private readonly bool $stopOnWarning;
 
     public static function empty(string $name = null): static
     {
@@ -150,13 +152,15 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
 
         $configuration = Registry::get();
 
-        $this->stopOnError      = $configuration->stopOnError();
-        $this->stopOnFailure    = $configuration->stopOnFailure();
-        $this->stopOnWarning    = $configuration->stopOnWarning();
-        $this->stopOnRisky      = $configuration->stopOnRisky();
-        $this->stopOnIncomplete = $configuration->stopOnIncomplete();
-        $this->stopOnSkipped    = $configuration->stopOnSkipped();
-        $this->stopOnDefect     = $configuration->stopOnDefect();
+        $this->stopOnDeprecation = $configuration->stopOnDeprecation();
+        $this->stopOnDefect      = $configuration->stopOnDefect();
+        $this->stopOnError       = $configuration->stopOnError();
+        $this->stopOnFailure     = $configuration->stopOnFailure();
+        $this->stopOnIncomplete  = $configuration->stopOnIncomplete();
+        $this->stopOnNotice      = $configuration->stopOnNotice();
+        $this->stopOnRisky       = $configuration->stopOnRisky();
+        $this->stopOnSkipped     = $configuration->stopOnSkipped();
+        $this->stopOnWarning     = $configuration->stopOnWarning();
     }
 
     /**
